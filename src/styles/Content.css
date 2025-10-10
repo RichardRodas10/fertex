@@ -1,0 +1,182 @@
+/**************************** INICIO ****************************/
+.start-container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+  
+.hero-section {
+    background-image: url('https://t3.ftcdn.net/jpg/04/13/73/26/360_F_413732606_HRyaNDWlgJtnukp3k2nJpulLWkihZdjg.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    min-height: 300px;
+    max-height: 600px;
+    display: flex;
+    align-items: flex-start;
+    padding-top: 3rem;
+    color: white;
+}
+  
+.hero-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+  
+.hero-content {
+    text-align: left;
+}
+  
+.hero-content h2.hero-subtitle {
+    margin: 2rem 0 0 0;
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+  
+.hero-content h1.hero-title {
+    margin: 0.3rem 0;
+    font-size: 8rem;
+    font-weight: 600;
+}
+  
+.hero-content p.hero-text {
+    margin: 0.5rem 0 0;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.intro-section {
+    background-color: #ffffff;
+    padding: 2rem 20%;
+    text-align: left;
+}
+  
+
+.cards-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: -5rem;
+}
+  
+.card {
+    /* max-width: 300px; */
+    flex: 1 1 250px;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-bottom: 6px solid transparent;
+    border-radius: 1rem 1rem 1rem 1rem;
+}
+
+.card-orange {
+    border-bottom-color: #FF7F50;
+}
+
+.card-yellow {
+    border-bottom-color: #FFD700;
+}
+
+.card-red {
+    border-bottom-color: #FF4C4C;
+}
+
+
+.card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Título */
+.card-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+}
+
+
+.card-text {
+    font-size: 1rem;
+    color: black;
+    margin: 0 0 2rem 0;
+}
+
+.card-orange .card-icon,
+.card-orange .card-title {
+    color: #FF7F50;
+}
+
+.card-yellow .card-icon,
+.card-yellow .card-title {
+    color: #FFD700;
+}
+
+.card-red .card-icon,
+.card-red .card-title {
+    color: #FF4C4C;
+}
+
+.card-orange .card-line {
+    background-color: #FF7F50;
+}
+
+.card-yellow .card-line {
+    background-color: #FFD700;
+}
+
+.card-red .card-line {
+    background-color: #FF4C4C;
+}
+
+
+@media (max-width: 768px) {
+    .hero-section {
+        height: 40vh;
+        padding-top: 2rem;
+    }
+
+    .hero-content h2.hero-subtitle {
+        font-size: 1.2rem;
+    }
+    .hero-content h1.hero-title {
+        font-size: 3.5rem;
+    }
+    .hero-content p.hero-text {
+        font-size: 1rem;
+    }
+
+    .intro-section {
+        padding: 3rem 5%;
+    }
+
+    .cards-container{
+        margin-top: -2rem;
+    }
+}
+
+/**************************** NOSOTROS ****************************/
+
+.nosotros-container{
+    background-color: blueviolet;
+}
+
+/**************************** DISCIPLINAS ****************************/
+.disciplina-container{
+    background-color: rgb(53, 124, 65);
+}
+/**************************** GALERIA ****************************/
+.galeria-container{
+    background-color: rgb(226, 43, 150);
+}
+/**************************** CONTACTO ****************************/
+.contacto-container{
+    background-color: rgb(211, 178, 68);
+}
