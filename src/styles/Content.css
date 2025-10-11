@@ -6,75 +6,131 @@
 }
   
 .hero-section {
+    position: relative;
     background-image: url('../assets/images/fondo-inicio.png');
     background-size: cover;
-    background-position: center;
-    height: 60vh;
+    background-position: 85%;
+    height: 65vh;
     min-height: 300px;
     max-height: 600px;
     display: flex;
     align-items: flex-start;
-    padding-top: 3rem;
+    padding-top: 5.5rem;
     color: white;
+    background-attachment: fixed;
+    overflow: hidden;
 }
-  
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45); /* oscurece sin opacar el texto */
+  z-index: 1;
+}
+
+@media (min-width: 768px) {
+    .hero-section {
+        background-position: right top;  
+    }
+    .hero-section::before {
+    background: rgba(0, 0, 0, 0.15); /* oscurece sin opacar el texto */
+
+    }
+}
+
 .hero-wrapper {
+    position: relative;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 5rem;
+    z-index: 2;
 }
-  
+
 .hero-content {
-    text-align: left;
+    text-align: center;
 }
-  
+
+@media (min-width: 768px) {
+    .hero-content {
+        padding-right: 18rem;
+        text-align: left;
+    }
+}
+
+@media (min-width: 1300px) {
+    .hero-content {
+        padding-right: 23rem;
+    }
+}
+
 .hero-content h2.hero-subtitle {
     margin: 2rem 0 0 0;
     font-size: 2.5rem;
-    font-weight: 500;
+    font-weight: 400;
+    line-height: 1;
 }
   
 .hero-content h1.hero-title {
+    font-family: "Saira Stencil One", sans-serif;
     margin: 0.3rem 0;
     font-size: 8rem;
     font-weight: 600;
+    line-height: 0.9;
 }
-  
+
+@media (min-width: 1300px) {
+    .hero-content h1.hero-title {
+        margin-left: -5px;
+    }
+    .typing {
+        text-wrap: nowrap;
+        overflow: hidden;
+        width: 5.7ch;
+        animation: typing 0.5s steps(6) forwards;
+    }
+    @keyframes typing {
+        from {
+            width: 0ch;
+        }
+    }
+}
+
 .hero-content p.hero-text {
-    margin: 0.5rem 0 0;
-    font-size: 1.5rem;
-    font-weight: 500;
+    margin: 1.5rem 0;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.2;
 }
 
 .intro-section {
+    position: relative;
     background-color: #ffffff;
     padding: 2rem 20%;
     text-align: left;
+    z-index: 2;
 }
-  
 
 .cards-container {
     display: flex;
-    gap: 2rem;
+    gap: 3rem;
     justify-content: center;
     flex-wrap: wrap;
     margin-top: -5rem;
+    z-index: 2;
 }
   
 .card {
-    /* max-width: 300px; */
     flex: 1 1 250px;
     background-color: #ffffff;
     border-radius: 1rem;
     padding: 2rem 1.5rem;
-    display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     border-bottom: 6px solid transparent;
-    border-radius: 1rem 1rem 1rem 1rem;
 }
 
 .card-orange {
@@ -86,7 +142,7 @@
 }
 
 .card-red {
-    border-bottom-color: #FF4C4C;
+    border-bottom-color: #e72929;
 }
 
 
@@ -99,19 +155,19 @@
 .card-title {
     font-size: 1.3rem;
     font-weight: 700;
-    margin: 0 0 0.5rem 0;
+    margin-bottom: 1rem;
 }
 
 
 .card-text {
     font-size: 1rem;
-    color: black;
-    margin: 0 0 2rem 0;
+    color: #1a1a1a;
+    margin-bottom: 2rem;
 }
 
 .card-orange .card-icon,
 .card-orange .card-title {
-    color: #FF7F50;
+    color: #F7842E;
 }
 
 .card-yellow .card-icon,
@@ -121,46 +177,84 @@
 
 .card-red .card-icon,
 .card-red .card-title {
-    color: #FF4C4C;
+    color: #e72929;
 }
 
-.card-orange .card-line {
-    background-color: #FF7F50;
+@media (min-width: 930px) {
+    @keyframes fadeSlideInLeft {
+    from { opacity: 0; transform: translateX(-90px); }
+    to   { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes fadeSlideInUp {
+    from { opacity: 0; transform: translateY(90px); }
+    to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeSlideInRight {
+    from { opacity: 0; transform: translateX(90px); }
+    to   { opacity: 1; transform: translateX(0); }
+    }
+    .cards-container .card:nth-child(1) {
+    animation: fadeSlideInLeft 1s ease-out forwards .05s;
+    }
+    .cards-container .card:nth-child(2) {
+    animation: fadeSlideInRight 1s ease-out forwards .05s;
+    }
+    .cards-container .card:nth-child(3) {
+    animation: fadeSlideInUp 1s  ease-out forwards .05s;
+    }
 }
-
-.card-yellow .card-line {
-    background-color: #FFD700;
+@media (min-width: 1425px) {
+    .cards-container .card:nth-child(2) {
+    animation: fadeSlideInUp 1s ease-out forwards .05s;
+    }
+    .cards-container .card:nth-child(3) {
+    animation: fadeSlideInRight 1s  ease-out forwards .05s;
+    }
 }
-
-.card-red .card-line {
-    background-color: #FF4C4C;
-}
-
 
 @media (max-width: 768px) {
-    .hero-section {
-        height: 40vh;
-        padding-top: 2rem;
+    .hero-wrapper {
+        padding: 0 2.5rem;
     }
-
+    .hero-section {
+        height: 60vh;
+        padding-top: 5rem;
+    }
     .hero-content h2.hero-subtitle {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
     }
     .hero-content h1.hero-title {
-        font-size: 3.5rem;
+        font-size: 4.5rem;
     }
     .hero-content p.hero-text {
-        font-size: 1rem;
+        padding: 0 1.7rem;
+        font-size: 1.2rem;
+        line-height: 1.4;
     }
-
     .intro-section {
         padding: 3rem 5%;
     }
-
-    .cards-container{
-        margin-top: -2rem;
+    .cards-container {
+        gap: 2rem;
+        margin-top: -5.5rem;
+    }  
+    .card {
+        border-radius: 1rem;
+        padding: 2rem 1.5rem;
+        margin: 0 1rem;
+    }
+    @keyframes fadeOnly {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    .cards-container .card:nth-child(1),
+    .cards-container .card:nth-child(2),
+    .cards-container .card:nth-child(3) {
+        animation: fadeOnly 1s ease-out forwards .05s;
+        transform: none !important;
     }
 }
+
 
 /**************************** NOSOTROS ****************************/
 

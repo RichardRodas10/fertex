@@ -11,9 +11,8 @@ function Inicio() {
         <div className="hero-wrapper">
           <div className="hero-content">
             <h2 className="hero-subtitle">ARTES MARCIALES</h2>
-            <h1 className="hero-title">FERTEX</h1>
-            <p className="hero-text">TaekwondoFertex - Escuela de artes marciales con 20 años de experiencia.</p>
-            <p className="hero-text">Enseñanza y difusión del Taekwondo ITF, Muay Thai, Capoeira y Preparación física.</p>
+            <h1 className="hero-title typing">FERTEX</h1>
+            <p className="hero-text">TaekwondoFertex - Escuela de artes marciales con 20 años de experiencia. Enseñanza y difusión del Taekwondo ITF, Muay Thai, Capoeira y Preparación Física.</p>
           </div>
         </div>
       </div>
@@ -45,7 +44,6 @@ function Inicio() {
 
         </div>
       </div>
-
     </div>
   );
 }
