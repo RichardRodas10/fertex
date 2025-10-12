@@ -37,7 +37,7 @@ function Header() {
           if (link) link.classList.add('active');
         }
       },
-      { rootMargin: `-${headerHeight}px 0px -40% 0px`, threshold: [0.25, 0.5, 0.75] }
+      { rootMargin: `-${headerHeight}px 0px 0% 0px`, threshold: [0.25, 0.5, 0.75] }
     );
 
     sections.forEach(sec => observer.observe(sec));
