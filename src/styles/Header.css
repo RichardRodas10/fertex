@@ -10,7 +10,7 @@
   height: 90px;
   z-index: 100;
   background-color: #ffffff;
-  color: #1a1a1a;
+  color: var(--oscuro);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -51,12 +51,12 @@
 }
 
 .nav-links a:hover {
-    color: #F7842E;
+    color: var(--naranja);
 }
 
 .nav-links svg {
     font-size: 1.8rem;
-    color: #000000;
+    color: var(--oscuro);
     transition: transform 0.2s ease;
 }
 
@@ -65,7 +65,7 @@
 }
 
 .nav-links a.active {
-    color: #F7842E;
+    color: var(--naranja);
     transition: color 0.2s ease, transform 0.12s ease;
 }
 
@@ -75,7 +75,7 @@
     border: none;
     padding: 0;
     font-size: 2rem;
-    color: #1a1a1a;
+    color: var(--oscuro);
     cursor: pointer;
     line-height: 1;
     margin-left: auto;
@@ -98,7 +98,7 @@ transform: scale(1.1);
         background: none;
         border: none;
         font-size: 2rem;
-        color: #1a1a1a;
+        color: var(--oscuro);
         cursor: pointer;
         z-index: 999;
     }
@@ -165,7 +165,7 @@ transform: scale(1.1);
 
     .close-btn:hover {
         transform: scale(1.1);
-        color: #1a1a1a;
+        color: var(--oscuro);
     }
 
     .nav-links svg {

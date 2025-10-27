@@ -134,7 +134,7 @@
 }
 
 .card-orange {
-    border-bottom-color: #FF7F50;
+    border-bottom-color: var(--naranja);
 }
 
 .card-yellow {
@@ -161,13 +161,13 @@
 
 .card-text {
     font-size: 1rem;
-    color: #1a1a1a;
+    color: var(--oscuro);
     margin-bottom: 2rem;
 }
 
 .card-orange .card-icon,
 .card-orange .card-title {
-    color: #F7842E;
+    color: var(--naranja);
 }
 
 .card-yellow .card-icon,
@@ -240,11 +240,14 @@
     }  
     .card {
         border-radius: 1rem;
-        padding: 2rem 1.5rem;
-        margin: 0 1rem;
+        padding: 1.5rem 1.5rem;
+        margin: 0 2rem;
+    }
+    .card-text {
+        margin-bottom: .5rem;
     }
     @keyframes fadeOnly {
-        from { opacity: 0; }
+        from { opacity: 0.25; }
         to { opacity: 1; }
     }
     .cards-container .card:nth-child(1),
@@ -260,41 +263,87 @@
 
 .nosotros-container{
     background-color: blueviolet;
+    max-width: 1425px;          
+    margin: 0 auto; 
+    padding: 0 2rem;
+    color: var(--oscuro);
 }
 
 /**************************** DISCIPLINAS ****************************/
 .disciplina-container{
     background-color: rgb(53, 124, 65);
+    max-width: 1425px;          
+    margin: 0 auto; 
+    padding: 0 2rem;
+    color: var(--oscuro);
 }
 /**************************** GALERIA ****************************/
 .galeria-container{
-    background-color: rgb(226, 43, 150);
+    max-width: 1425px;          
+    margin: 0 auto; 
+    padding: 0 2rem;
+    color: var(--oscuro);
 }
+
+.galeria-title {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    font-size: 45px;
+    font-weight: bold;
+    margin-bottom: 70px;
+    padding-top: 14px;
+}
+
+.galeria-title::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    width: 90px;
+    height: 5px;
+    background-color: var(--naranja);
+    border-radius: 2px;
+}
+
+@media (max-width: 575px) {
+
+    .galeria-title {
+        font-size: 2rem;
+        margin-bottom: 50px;
+    }
+
+}
+
 /**************************** CONTACTO ****************************/
 
 .contacto-container {
-    padding: 0 10%;
-    color: black;
+    max-width: 1425px;          
+    margin: 0 auto; 
+    padding: 5rem 2rem 6rem;
+    color: var(--oscuro);
 }
 
 .contacto-title {
     position: relative;
     display: inline-block;
     text-align: center;
-    font-size: 2rem;
+    font-size: 45px;
     font-weight: bold;
-    margin-bottom: 50px;
-    padding-top: 10px;
+    margin-bottom: 70px;
+    padding-top: 14px;
 }
 
-.contacto-title::before {
+.contacto-title::after {
     content: "";
     position: absolute;
-    top: 0;
-    left: 35%;
-    width: 30%;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    width: 120px;
     height: 5px;
-    background-color: orange;
+    background-color: var(--naranja);
     border-radius: 2px;
 }
 
@@ -303,35 +352,42 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: start;
-    gap: 40px;
+    gap: 5rem;
 }
 
 .contacto-info {
     flex: 1;
-    max-width: 400px;
+    max-width: 600px;
     min-width: 280px;
     text-align: left;
 }
 
 .contacto-info h3 {
-    font-size: 1.6rem;
+    font-size: 30px;
     font-weight: 700;
     margin-bottom: 1rem;
+}
+
+.contacto-info p {
+    margin-bottom: 1rem;
+    font-size: 17px;
 }
 
 .contacto-info strong {
     font-size: 1.4rem;
     margin-bottom: 1rem;
-    color: #4d4c4c;
+    color: var(--oscuro);
 }
 
 .contacto-info a {
     margin-right: 15px;
+    
 }
 
 .contacto-info a svg {
     font-size: 2rem;
-    color: #000000;
+    color: var(--oscuro);
+    transition: transform 0.2s ease;
 }
 
 .contacto-info a svg:hover {
@@ -340,23 +396,24 @@
 
 .contacto-boton {
     display: inline-block;
-    background-color: orange;
+    background-color: var(--naranja);
     color: white;
-    padding: 2px 8px;
+    font-size: 18px;
+    padding: 2px 10px;
     font-weight: bold;
-    border-radius: 5px;
-    margin-bottom: 5px;
+    border-radius: 10px;
+    margin-bottom: 1rem;
 }
 
 .contacto-mapa {
     flex: 1;
     min-width: 300px;
     max-width: 650px;
-    height: 400px;
+    height: 450px;
 }
 
 .content-bottom {
-    width: 75%;
+    width: 100%;
     margin: 70px auto;
     border-top: 1px solid #ccc;
     opacity: 0.8;
@@ -366,18 +423,21 @@
     margin-bottom: 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 575px) {
+    .contacto-container {
+        padding: 4rem 2rem;
+    }
     .contacto-content {
-        gap: 10px;
+        gap: 2rem;
     }
 
     .contacto-title {
-        font-size: 1.8rem;
-        margin-bottom: 35px;
+        font-size: 2rem;
+        margin-bottom: 50px;
     }
 
     .contacto-info h3 {
-        font-size: 1.4rem;
+        font-size: 1.5rem;
         font-weight: 700;
         margin-bottom: 1rem;
         margin-top: 0;
@@ -388,11 +448,11 @@
     }
 
     .contacto-mapa{
-        height: 200px;
+        height: 300px;
     }
 
     .content-bottom {
-        width: 100%;
-        margin: 50px auto;
+        margin: 40px auto;
     }
+
 }

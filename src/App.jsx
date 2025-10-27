@@ -14,12 +14,10 @@ function App() {
       <Header />
       <main>
         <Inicio />
-        <div className="app-container">
           <Nosotros />
           <Disciplina />
           <Galeria />
           <Contacto />
-        </div>
       </main>
       <Footer />
     </>

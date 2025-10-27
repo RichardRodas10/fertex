@@ -78,9 +78,6 @@ function Contacto() {
           ></iframe>
         </div>
       </div>
-
-      <div className="content-bottom">
-      </div>
     </div>
   );
 }
