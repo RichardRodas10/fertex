@@ -91,19 +91,14 @@ function Header() {
           </div>
 
           <ul className="nav-links">
-            <li><a href="#inicio" onClick={e => handleNavClick(e, 'inicio')}>Inicio</a></li>
-            <li><a href="#nosotros" onClick={e => handleNavClick(e, 'nosotros')}>Nosotros</a></li>
-            <li><a href="#disciplina" onClick={e => handleNavClick(e, 'disciplina')}>Disciplinas</a></li>
-            <li><a href="#galeria" onClick={e => handleNavClick(e, 'galeria')}>Galería</a></li>
-            <li><a href="#contacto" onClick={e => handleNavClick(e, 'contacto')}>Contacto</a></li>
-            <li>
-              <a href="https://www.facebook.com/FertexGukGi" target="_blank" rel="noopener noreferrer">
-                <FontAwesomeIcon icon={faFacebook} />
-              </a>
-              <a href="https://www.instagram.com/fertexartesmarciales/" target="_blank" rel="noopener noreferrer">
-                <FontAwesomeIcon icon={faInstagram} />
-              </a>
-            </li>
+            <li><a className='a' href="#inicio" onClick={e => handleNavClick(e, 'inicio')}>Inicio</a></li>
+            <li><a className='a' href="#nosotros" onClick={e => handleNavClick(e, 'nosotros')}>Nosotros</a></li>
+            <li><a className='a' href="#disciplina" onClick={e => handleNavClick(e, 'disciplina')}>Disciplinas</a></li>
+            <li><a className='a' href="#galeria" onClick={e => handleNavClick(e, 'galeria')}>Galería</a></li>
+            <li><a className='a' href="#contacto" onClick={e => handleNavClick(e, 'contacto')}>Locales</a></li>
+            <a href="https://www.facebook.com/fertexartesmarciales/" target="_blank" class="button type1">
+              <span class="btn-txt">Contáctanos</span>
+            </a>
           </ul>
         </nav>
       </div>

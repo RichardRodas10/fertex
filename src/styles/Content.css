@@ -25,7 +25,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.45); /* oscurece sin opacar el texto */
+  background: rgba(0, 0, 0, 0.45);
   z-index: 1;
 }
 
@@ -34,7 +34,7 @@
         background-position: right top;  
     }
     .hero-section::before {
-    background: rgba(0, 0, 0, 0.15); /* oscurece sin opacar el texto */
+    background: rgba(0, 0, 0, 0.15);
 
     }
 }
@@ -67,33 +67,119 @@
 
 .hero-content h2.hero-subtitle {
     margin: 2rem 0 0 0;
-    font-size: 2.5rem;
-    font-weight: 400;
+    font-size: 2.6rem;
+    font-weight: 500;
     line-height: 1;
-}
-  
-.hero-content h1.hero-title {
-    font-family: "Saira Stencil One", sans-serif;
-    margin: 0.3rem 0;
-    font-size: 8rem;
-    font-weight: 600;
-    line-height: 0.9;
+    color: var(--naranja);
+    text-shadow: 0 0 1px var(--naranja);
 }
 
-@media (min-width: 1300px) {
-    .hero-content h1.hero-title {
-        margin-left: -5px;
-    }
-    .typing {
-        text-wrap: nowrap;
-        overflow: hidden;
-        width: 5.7ch;
-        animation: typing 0.5s steps(6) forwards;
-    }
-    @keyframes typing {
-        from {
-            width: 0ch;
-        }
+
+.animate {
+    font-family: "Saira Stencil One", sans-serif;
+    margin: 0rem 0;
+    font-size: 8rem;
+    font-weight: 600;
+    margin-left: -5px;
+    line-height: 1;
+}
+
+.animate span {
+	display: inline-block;
+}
+
+.animate span:nth-of-type(2) {
+	animation-delay: .05s;
+}
+.animate span:nth-of-type(3) {
+	animation-delay: .1s;
+}
+.animate span:nth-of-type(4) {
+	animation-delay: .15s;
+}
+.animate span:nth-of-type(5) {
+	animation-delay: .2s;
+}
+.animate span:nth-of-type(6) {
+	animation-delay: .25s;
+}
+.animate span:nth-of-type(7) {
+	animation-delay: .3s;
+}
+.animate span:nth-of-type(8) {
+	animation-delay: .35s;
+}
+.animate span:nth-of-type(9) {
+	animation-delay: .4s;
+}
+.animate span:nth-of-type(10) {
+	animation-delay: .45s;
+}
+.animate span:nth-of-type(11) {
+	animation-delay: .5s;
+}
+.animate span:nth-of-type(12) {
+	animation-delay: .55s;
+}
+.animate span:nth-of-type(13) {
+	animation-delay: .6s;
+}
+.animate span:nth-of-type(14) {
+	animation-delay: .65s;
+}
+.animate span:nth-of-type(15) {
+	animation-delay: .7s;
+}
+.animate span:nth-of-type(16) {
+	animation-delay: .75s;
+}
+.animate span:nth-of-type(17) {
+	animation-delay: .8s;
+}
+.animate span:nth-of-type(18) {
+	animation-delay: .85s;
+}
+.animate span:nth-of-type(19) {
+	animation-delay: .9s;
+}
+.animate span:nth-of-type(20) {
+	animation-delay: .95s;
+}
+
+.title span {
+	color: #ffffff;
+    text-shadow: 0 0 2px #ffffff;
+	opacity: 0;
+	transform: translate(-300px, 0) scale(0);
+	animation: sideSlide .6s forwards;
+}
+
+@keyframes sideSlide {
+	60% {
+		transform: translate(20px, 0) scale(1);
+		color: #ffffff;
+	}
+
+	80% {
+		transform: translate(20px, 0) scale(1);
+		color: #ffffff;
+	}
+
+	99% {
+		transform: translate(0) scale(1.2);
+		color: var(--naranja);
+	}
+
+	100% {
+		transform: translate(0) scale(1);
+		opacity: 1;
+		color: #ffffff;
+	}
+}
+
+@media (max-width: 575px) {
+    .title {
+        font-size: 5.2rem;
     }
 }
 
@@ -221,10 +307,8 @@
         padding-top: 5rem;
     }
     .hero-content h2.hero-subtitle {
-        font-size: 1.4rem;
-    }
-    .hero-content h1.hero-title {
-        font-size: 4.5rem;
+        font-size: 29px;
+        font-weight: 500;
     }
     .hero-content p.hero-text {
         padding: 0 1.7rem;
@@ -369,7 +453,7 @@
 }
 
 .contacto-info p {
-    margin-bottom: 1rem;
+    margin-bottom: .60rem;
     font-size: 17px;
 }
 

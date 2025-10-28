@@ -30,6 +30,7 @@
 .footer-column h3 {
     font-weight: 600;
     margin: 19px 0 8px 0;
+    color: var(--naranja);
 }
 
 .footer-column p {
@@ -48,11 +49,11 @@
     color: #fff;
     font-size: 1.8rem;
     text-decoration: none;
-    transition: transform 0.2s ease;
+    transition: transform 0.3s ease;
 }
 
 .footer-social a:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 
 .footer-bottom {
@@ -63,7 +64,7 @@
     flex-wrap: wrap;
     font-size: 15px;
     color: #fff;
-    border-top: 1px solid #fff;
+    border-top: 1px solid var(--naranja);
     padding-top: 15px;
 }
 
