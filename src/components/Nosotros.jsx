@@ -2,10 +2,10 @@ import '../styles/Content.css';
 
 function Nosotros() {
   return (
-    <div id="nosotros" className="nosotros-container">
-        <div className="nosotros-content">
-            <h1>Este es el apartado de Nosotros.</h1>
-        </div>
+    <div className="w-full">
+      <div id="disciplina" className="max-w-[1425px] mx-auto px-4 text-[var(--oscuro)]">
+        <h1>Este es el apartado de Nosotros</h1>
+      </div>
     </div>
   );
 }

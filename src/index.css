@@ -21,9 +21,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* html {
-  scroll-behavior: smooth;
-} */
+::selection {
+  background: var(--oscuro);
+  color: white;
+}
 
 body, html {
   width: 100%;

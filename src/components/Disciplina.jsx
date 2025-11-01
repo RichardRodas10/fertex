@@ -1,9 +1,9 @@
-import '../styles/Content.css';
-
 function Disciplina() {
   return (
-    <div id="disciplina" className="disciplina-container">
-      <h1>Esta es mi Disciplina.</h1>
+    <div className="w-full bg-[#f8f8f8]">
+      <div id="disciplina" className="max-w-[1425px] mx-auto px-4 text-[var(--oscuro)]">
+        <h1>Este es el apartado de Disciplina</h1>
+      </div>
     </div>
   );
 }

@@ -194,7 +194,7 @@ transform: scale(1.1);
     }
 }
 
-.button {
+.header-button {
   height: 48px;
   width: 157px;
   position: relative;
@@ -207,11 +207,11 @@ transform: scale(1.1);
   transition: all 0.5s ease-in-out;
 }
 
-.btn-txt {
+.header-btn-txt {
   z-index: 1;
   font-weight: 600;
   font-size: 19px;
-  line-height: 2.2;
+  line-height: 2.4;
 }
 
 .type1::after {
@@ -228,7 +228,7 @@ transform: scale(1.1);
   z-index: -1;
 }
 
-.button:hover {
+.header-button:hover {
   box-shadow: 1px 1px 5px var(--naranja);
   color: #fff;
   background-color: var(--naranja);
@@ -239,6 +239,6 @@ transform: scale(1.1);
   transform: scale(100) translateX(2px);
 }
 
-.button:focus {
+.header-button:focus {
   outline: none;
 }

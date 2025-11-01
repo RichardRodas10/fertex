@@ -5,6 +5,7 @@
     position: relative;
     background: linear-gradient(180deg,rgba(36, 36, 36, 1) 0%, rgba(31, 31, 31, 1) 35%, rgba(26, 26, 26, 1) 69%, rgba(20, 20, 20, 1) 100%);
     font-size: 1.4rem;
+    box-shadow: 0 10px 4px rgba(126, 6, 6, 0.1);
   }
 
 .footer-container{
@@ -64,7 +65,7 @@
     flex-wrap: wrap;
     font-size: 15px;
     color: #fff;
-    border-top: 1px solid var(--naranja);
+    border-top: 1px solid #fff;
     padding-top: 15px;
 }
 

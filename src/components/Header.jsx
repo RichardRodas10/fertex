@@ -1,6 +1,5 @@
 import '../styles/Header.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { useEffect, useState } from 'react';
 
@@ -96,8 +95,8 @@ function Header() {
             <li><a className='a' href="#disciplina" onClick={e => handleNavClick(e, 'disciplina')}>Disciplinas</a></li>
             <li><a className='a' href="#galeria" onClick={e => handleNavClick(e, 'galeria')}>Galería</a></li>
             <li><a className='a' href="#contacto" onClick={e => handleNavClick(e, 'contacto')}>Locales</a></li>
-            <a href="https://www.facebook.com/fertexartesmarciales/" target="_blank" class="button type1">
-              <span class="btn-txt">Contáctanos</span>
+            <a href="https://www.facebook.com/fertexartesmarciales/" target="_blank" class="header-button type1">
+              <span class="header-btn-txt">Contáctanos</span>
             </a>
           </ul>
         </nav>
