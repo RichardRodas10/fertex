@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import '../styles/Content.css';
 
 function Galeria() {
   const [selectedImg, setSelectedImg] = useState(null);
+  const gridRef = useRef(null);
 
   const images = [
     { src: "/images/fertex-taekwondo-competencia-01.webp", alt: "Competencia de Taekwondo ITF Fertex" },
@@ -19,20 +20,43 @@ function Galeria() {
     { src: "/images/fertex-muaythai-entrenamiento-07.webp", alt: "Práctica de defensa en Muay Thai en Fertex" }
   ];
 
+  useEffect(() => {
+    const nodes = gridRef.current?.querySelectorAll("[data-reveal]");
+    if (!nodes || nodes.length === 0) return;
+
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            e.target.classList.add("animate-fadeInUp");
+            e.target.classList.remove("opacity-0");
+            io.unobserve(e.target);
+          }
+        });
+      },
+      { threshold: 0.15, rootMargin: "0px 0px -10% 0px" }
+    );
+
+    nodes.forEach((n) => io.observe(n));
+    return () => io.disconnect();
+  }, []);
+
   return (
     <div id="galeria" className="galeria-container">
       <h2 className="galeria-title">Galería</h2>
 
-      <div className="columns-2 md:columns-4 gap-4">
+      <div ref={gridRef} className="columns-2 md:columns-4 gap-4">
         {images.map((img, i) => (
           <img 
             key={i}
-            className="mb-4 rounded-lg cursor-pointer transform transition duration-300 hover:scale-102"
+            data-reveal
+            className="mb-4 rounded-lg cursor-pointer transform transition duration-300 hover:scale-98 opacity-0"
             src={img.src}
             alt={img.alt}
             onClick={() => {
               setSelectedImg(img.src);
               document.body.style.overflow = "hidden";
+              document.body.classList.add("modal-open");
             }}
           />
         ))}
@@ -40,15 +64,16 @@ function Galeria() {
       
     {selectedImg && (
         <div 
-            className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 backdrop-blur-sm"
+            className="fixed inset-0 bg-black/50 flex items-center justify-center z-[999]"
             onClick={() => {
             setSelectedImg(null);
             document.body.style.overflow = "auto";
+            document.body.classList.remove("modal-open");
             }}
         >
             <img 
             src={selectedImg} 
-            className="rounded-lg shadow-lg animate-fadeIn max-h-[85%] max-w-[85%] md:max-w-[22%]"
+            className="rounded-lg shadow-lg animate-fadeIn max-h-[85%] max-w-[90%] md:max-w-[40%]"
             alt=""
             />
         </div>
