@@ -5,7 +5,7 @@ import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
 function Contacto() {
   return (
     <div className="contacto">
-      <div id="contacto" className="contacto-container">
+      <section id="contacto" className="contacto-container">
         <h2 className="contacto-title">Nuestros locales</h2>
         <div className="contacto-content">
           <div className="contacto-info">
@@ -79,7 +79,7 @@ function Contacto() {
             ></iframe>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 }

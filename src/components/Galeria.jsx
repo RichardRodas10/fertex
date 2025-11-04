@@ -42,7 +42,7 @@ function Galeria() {
   }, []);
 
   return (
-    <div id="galeria" className="galeria-container">
+    <section id="galeria" className="galeria-container">
       <h2 className="galeria-title">Galería</h2>
 
       <div ref={gridRef} className="columns-2 md:columns-4 gap-4">
@@ -50,7 +50,7 @@ function Galeria() {
           <img 
             key={i}
             data-reveal
-            className="mb-4 rounded-lg cursor-pointer transform transition duration-300 hover:scale-98 opacity-0"
+            className="mb-4 rounded-xl cursor-pointer transform transition duration-300 hover:scale-98 opacity-0"
             src={img.src}
             alt={img.alt}
             onClick={() => {
@@ -78,7 +78,7 @@ function Galeria() {
             />
         </div>
     )}
-    </div>
+    </section>
   );
 }
 

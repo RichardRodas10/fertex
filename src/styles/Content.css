@@ -317,7 +317,7 @@
         line-height: 1.4;
     }
     .intro-section {
-        padding: 3rem 5%;
+        padding: 3rem 5% 3rem;
     }
     .cards-container {
         gap: 2rem;
@@ -365,17 +365,32 @@
     color: var(--oscuro);
 }
 
-.galeria-title {
+.galeria-title,
+.nosotros-title {
     position: relative;
     display: inline-block;
     text-align: center;
     font-size: 45px;
     font-weight: bold;
-    margin-bottom: 70px;
-    padding-top: 14px;
+    margin-bottom: 90px;
+    padding-top: 60px;
 }
 
-.galeria-title::after {
+.disciplinas-title,
+.contacto-title {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    font-size: 45px;
+    font-weight: bold;
+    margin-bottom: 90px;
+    padding-top: 30px; 
+}
+
+.galeria-title::after,
+.nosotros-title::after,
+.disciplinas-title::after,
+.contacto-title::after {
     content: "";
     position: absolute;
     left: 50%;
@@ -392,9 +407,12 @@
         padding: 1rem 1rem 2rem;
     }
 
-    .galeria-title {
+    .galeria-title,
+    .nosotros-title,
+    .disciplinas-title {
         font-size: 2rem;
         margin-bottom: 50px;
+        padding-top: 20px;
     }
 
 }
@@ -446,27 +464,7 @@
     padding: 1rem 1rem 6rem;
 }
 
-.contacto-title {
-    position: relative;
-    display: inline-block;
-    text-align: center;
-    font-size: 45px;
-    font-weight: bold;
-    margin-bottom: 70px;
-    padding-top: 14px;
-}
 
-.contacto-title::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: -10px;
-    transform: translateX(-50%);
-    width: 120px;
-    height: 5px;
-    background-color: var(--naranja);
-    border-radius: 2px;
-}
 
 .contacto-content {
     display: flex;
