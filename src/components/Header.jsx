@@ -60,7 +60,13 @@ function Header() {
   return (
     <header className="header">
       <div className="header-container">
-        <div className="site-logo">Fertex</div>
+      <div className="site-logo">
+        <img 
+          src="/images/logo-fertex.webp" 
+          alt="Logo Fertex Artes Marciales" 
+          className="logo-img"
+        />
+      </div>
 
         {/* Botón hamburguesa */}
         <button
@@ -95,7 +101,7 @@ function Header() {
             <li><a className='a' href="#disciplina" onClick={e => handleNavClick(e, 'disciplina')}>Disciplinas</a></li>
             <li><a className='a' href="#galeria" onClick={e => handleNavClick(e, 'galeria')}>Galería</a></li>
             <li><a className='a' href="#contacto" onClick={e => handleNavClick(e, 'contacto')}>Locales</a></li>
-            <a href="https://www.facebook.com/fertexartesmarciales/" target="_blank" class="header-button type1">
+            <a href="https://api.whatsapp.com/send/?phone=51944351592&text=Hola%2C+me+gustar%C3%ADa+recibir+m%C3%A1s+informaci%C3%B3n.&type=phone_number&app_absent=0" target="_blank" class="header-button type1">
               <span class="header-btn-txt">Contáctanos</span>
             </a>
           </ul>

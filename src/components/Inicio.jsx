@@ -14,7 +14,7 @@ function Inicio() {
             <div class="animate title">
               <span>F</span><span>E</span><span>R</span><span>T</span><span>E</span><span>X</span>
             </div>
-            <p className="hero-text">TaekwondoFertex - Escuela de artes marciales con 20 años de experiencia. Enseñanza y difusión del Taekwondo ITF, Muay Thai, Capoeira y Preparación Física.</p>
+            <p className="hero-text">Escuela de artes marciales con 20 años de experiencia. Enseñanza y difusión del Taekwondo ITF, Muay Thai, Capoeira y Preparación Física.</p>
           </div>
         </div>
       </div>
